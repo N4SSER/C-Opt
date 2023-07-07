@@ -49,14 +49,14 @@ cmake_ninja_workdir = /home/nasser/C-Opt/C-Opt/cmake-build-debug/
 
 build cmake_object_order_depends_target_C_Opt: phony || CMakeFiles/C_Opt.dir
 
-build CMakeFiles/C_Opt.dir/library.cpp.o: CXX_COMPILER__C_Opt_Debug /home/nasser/C-Opt/C-Opt/library.cpp || cmake_object_order_depends_target_C_Opt
-  DEP_FILE = CMakeFiles/C_Opt.dir/library.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/C_Opt.dir
-  OBJECT_FILE_DIR = CMakeFiles/C_Opt.dir
-
 build CMakeFiles/C_Opt.dir/src/algorithms/moo/GA.cpp.o: CXX_COMPILER__C_Opt_Debug /home/nasser/C-Opt/C-Opt/src/algorithms/moo/GA.cpp || cmake_object_order_depends_target_C_Opt
   DEP_FILE = CMakeFiles/C_Opt.dir/src/algorithms/moo/GA.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/C_Opt.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_Opt.dir/src/algorithms/moo
+
+build CMakeFiles/C_Opt.dir/src/algorithms/moo/NSGA2.cpp.o: CXX_COMPILER__C_Opt_Debug /home/nasser/C-Opt/C-Opt/src/algorithms/moo/NSGA2.cpp || cmake_object_order_depends_target_C_Opt
+  DEP_FILE = CMakeFiles/C_Opt.dir/src/algorithms/moo/NSGA2.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/C_Opt.dir
   OBJECT_FILE_DIR = CMakeFiles/C_Opt.dir/src/algorithms/moo
@@ -69,7 +69,7 @@ build CMakeFiles/C_Opt.dir/src/algorithms/moo/GA.cpp.o: CXX_COMPILER__C_Opt_Debu
 #############################################
 # Link the static library libC_Opt.a
 
-build libC_Opt.a: CXX_STATIC_LIBRARY_LINKER__C_Opt_Debug CMakeFiles/C_Opt.dir/library.cpp.o CMakeFiles/C_Opt.dir/src/algorithms/moo/GA.cpp.o
+build libC_Opt.a: CXX_STATIC_LIBRARY_LINKER__C_Opt_Debug CMakeFiles/C_Opt.dir/src/algorithms/moo/GA.cpp.o CMakeFiles/C_Opt.dir/src/algorithms/moo/NSGA2.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/C_Opt.dir
   POST_BUILD = :
