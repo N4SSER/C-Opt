@@ -1,0 +1,3 @@
+/home/nasser/C-Opt/C-Opt/cmake-build-debug/CMakeFiles/C_Opt.dir
+/home/nasser/C-Opt/C-Opt/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nasser/C-Opt/C-Opt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
