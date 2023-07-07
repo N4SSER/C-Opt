@@ -25,10 +25,13 @@ protected:
     double* upper_bound;
     double* lower_bound;
 
+    GA( int population_size, int offspring_size, int n_dim, double* upper_bound, double* lower_bound,
+        double crossover_probability, double mutation_rate);
     virtual void crossover();
     virtual void mutate(std::string** population, int size);
 
 private:
+    void init();
     std::string crossover(const std::string& parent_1, const std::string& parent_2);
     std::string* _encode(const double* solution);
     std::string** encode(double** population, int size);

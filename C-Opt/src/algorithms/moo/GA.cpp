@@ -4,6 +4,19 @@
 
 #include "GA.h"
 
+GA::GA(int population_size, int offspring_size, int n_dim, double *upper_bound, double *lower_bound,
+       double crossover_probability, double mutation_rate)
+{
+    this->population_size = population_size;
+    this->offspring_size = offspring_size;
+    this->n_dim = n_dim;
+    this->upper_bound = upper_bound;
+    this->lower_bound = lower_bound;
+    this->crossover_probability = crossover_probability;
+    this->mutation_rate = mutation_rate;
+
+    init();
+}
 void GA::crossover()
 {
     std::string** population = encode(this->population,population_size);
@@ -155,3 +168,26 @@ std::string GA::crossover(const std::string &parent_1, const std::string &parent
     std::string child = parent_1.substr(0, crossoverPoint) + parent_2.substr(crossoverPoint);
     return child;
 }
+
+void GA::init()
+{
+    population = new double*[population_size];
+    for (int i = 0; i < population_size; i++)
+        population[i] = new double[n_dim];
+
+    offsprings = new double*[offspring_size];
+    for (int i = 0; i < offspring_size; i++)
+        offsprings[i] = new double[n_dim];
+
+    for(int i =0; i < population_size; i++)
+    {
+        for(int j = 0; i<n_dim;j++)
+        {
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<int> dist(lower_bound[j], upper_bound[j]);
+            population[i][j] = dist(gen);
+        }
+    }
+}
+
