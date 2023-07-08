@@ -8,10 +8,10 @@
 
 typedef void (*KernelFunction)(int**, int*, int);
 
-class MOO_func {
+class FunctionEvaluator {
 public:
-    MOO_func(KernelFunction kernelFunc);
-    ~MOO_func();
+    FunctionEvaluator(KernelFunction kernelFunc);
+    ~FunctionEvaluator();
 
     void evaluate(int** X, int* Y, int numElements);
 

@@ -5,7 +5,7 @@
 #ifndef C_OPT_NSGA2_H
 #define C_OPT_NSGA2_H
 
-#include "GA.h"
+#include "../GA.h"
 #include <vector>
 #include <algorithm>
 #include <iostream>
