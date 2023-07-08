@@ -106,12 +106,12 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/algorithms/moo/NSGA2_Parallel.cu",
+			"path" : "src/algorithms/moo/Moo_Funcs.cu",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/algorithms/moo/NSGA2_Parallel.cuh",
+			"path" : "src/algorithms/moo/Moo_Funcs.cuh",
 			"sourceGroupIndex" : 2
 		},
 		{
